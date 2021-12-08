@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <h1>Cafes</h1>
+    <div id="add-div">
+    <button><a id="add-button" href="{{url_for('add_cafe')}}">ADD CAFE</a></button>
+    </div>
+        <table>
+        <tr>
+            <th>Cafe</th>
+            <th>Location</th>
+            <th>seats</th>
+            <th>Toilets</th>
+            <th>Wifi</th>
+            <th>Sockets</th>
+            <th>phone calls</th>
+            <th>Coffee price</th>
+        </tr>
+    {% for cafe in cafes %}
+        <tr>
+            <td>{{cafe.name}}<div><img class="square" src=" {{cafe.img_url }}" alt=""></div></td>
+            <td>{{cafe.location}}</td>
+            <td>{{cafe.seats}}</td>
+            <td>{{cafe.has_toilet}}</td>
+            <td>{{cafe.has_wifi}}</td>
+            <td>{{cafe.has_sockets}}</td>
+            <td>{{cafe.can_take_calls}}</td>
+            <td>{{cafe.coffee_price}}</td>
+            <td><a href="{{url_for('delete_cafe', cafe_id=cafe.id)}}">Delete</a></td>
+         </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

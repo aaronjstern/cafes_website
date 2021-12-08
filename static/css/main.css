@@ -1,0 +1,56 @@
+
+h1 {
+    text-align: center;
+}
+
+img {
+    padding: 5px;
+    width: 200px;
+    height: 200px;
+}
+
+th {
+    border: solid;
+
+}
+
+td {
+    font-family: sans-serif;
+    border: solid;
+    padding: 10px;
+    text-align: center;
+    margin: 0px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+
+}
+
+
+#add-button {
+    margin-bottom: 50px;
+    color: black;
+}
+
+#add-div{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#add-header{
+    display:flex;
+    justify-content: center;
+}
+
+#add-form {
+    display:flex;
+    justify-content: center;
+    border: 2px solid;
+    margin: 0px 330px;
+    padding: 30px 0px;
+    font-size: 1.5em;
+    font-family: san-serif;
+}
